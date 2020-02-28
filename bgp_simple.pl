@@ -637,16 +637,16 @@ sub sub_update_from_file
 			next;
 	 	};
 
-		sub_debug ("u", "Send Update: ") 			if (!$dry);
-		sub_debug ("u", "Generated Update (not sent): ") 	if ($dry);
-		sub_debug ("u", "prfx [$prefix] aspath [$aspath] ");
-		sub_debug ("u", "locprf [$local_pref] ") 		if ($peer_type eq "iBGP");
-		sub_debug ("u", "med [$med] ")				if ($med);
-		sub_debug ("u", "comm [@communities] ")			if (@communities);
-		sub_debug ("u", "orig [$nlri[7]] ");
-		sub_debug ("u", "agg [@agg] ")				if (@agg);
-		sub_debug ("u", "atom [$atomic_agg] ")			if ($atomic_agg);
-		sub_debug ("u", "nxthp [$nexthop]\n");
+		sub_debug ("d", "Send Update: ") 			if (!$dry);
+		sub_debug ("d", "Generated Update (not sent): ") 	if ($dry);
+		sub_debug ("d", "prfx [$prefix] aspath [$aspath] ");
+		sub_debug ("d", "locprf [$local_pref] ") 		if ($peer_type eq "iBGP");
+		sub_debug ("d", "med [$med] ")				if ($med);
+		sub_debug ("d", "comm [@communities] ")			if (@communities);
+		sub_debug ("d", "orig [$nlri[7]] ");
+		sub_debug ("d", "agg [@agg] ")				if (@agg);
+		sub_debug ("d", "atom [$atomic_agg] ")			if ($atomic_agg);
+		sub_debug ("d", "nxthp [$nexthop]\n");
 
 		if (! $dry)
 		{
